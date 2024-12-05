@@ -4,54 +4,50 @@ import "fmt"
 
 func main() {
 	/*
-		1. (feez buzz)buatkan angka 1 - 100
+		1. (fizz buzz)buatkan angka 1 - 100
 		namun setiap angka yang habis dibagi 3 cetak feez
 		dan  dibagi 5 buzz, jika habis dibagi 3 dan 5 fezz buzz
-		2. buatkan operator matematika
+		2. buatkan operator matematika sederhana
 	*/
-	// FizzBuzz()
-	calculateInput()
+
+	// fizzbuzz()
+	calculate()
+
 }
 
-func FizzBuzz() {
-	for i := 0; i <= 100; i++ {
+func fizzbuzz() {
+	for i := 1; i <= 100; i++ {
 		if i%3 == 0 && i%5 == 0 {
-			fmt.Println("Fizzbuzz")
+			fmt.Println("fizzbuzz")
 		} else if i%3 == 0 {
-			fmt.Println("Fizz")
+			fmt.Println("fizz")
 		} else if i%5 == 0 {
-			fmt.Println("Buzz")
+			fmt.Println("buzz")
 		} else {
 			fmt.Println(i)
 		}
 	}
 }
 
-func calculate(a int, b int, operator string) int {
-	var hasil int
+func calculate() {
+	var angka1, angka2 float64
+	fmt.Println("masukkan angka :")
+	fmt.Scan(&angka1, &angka2)
+
+	var operator string
+	fmt.Println("masukan operator :")
+	fmt.Scan(&operator)
+
 	switch operator {
 	case "+":
-		hasil = a + b
+		fmt.Println(angka1 + angka2)
 	case "-":
-		hasil = a - b
+		fmt.Println(angka1 - angka2)
 	case "*":
-		hasil = a * b
+		fmt.Println(angka1 * angka2)
 	case "/":
-		hasil = a / b
-
+		fmt.Println(angka1 / angka2)
+	default:
+		fmt.Println("error")
 	}
-	return hasil
-
-}
-
-func calculateInput() {
-	var a, b int
-	var operator string
-	fmt.Println("input angka 1:")
-	fmt.Scan(&a)
-	fmt.Println("input angka 1:")
-	fmt.Scan(&b)
-	fmt.Println("InputOperator :")
-	fmt.Scan(&operator)
-	fmt.Println("hasil : ", calculate(a, b, operator))
 }
