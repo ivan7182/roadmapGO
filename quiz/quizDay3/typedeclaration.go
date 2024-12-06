@@ -24,10 +24,24 @@ Gunakan nilai berat berikut:
 
 Berat pertama: 62.5 kg
 Berat kedua: 70.3 kg
+
+Soal 3: Membandingkan Nilai dengan Tipe Data Baru
+Buat tipe data baru bernama Score yang merupakan tipe alias
+dari int. Buat program untuk mengevaluasi apakah nilai siswa di bawah standar
+kelulusan. Gunakan standar kelulusan sebesar 75.
+
+Nilai siswa: 68
+Petunjuk:
+
+Deklarasikan tipe data Score.
+Buat variabel nilai siswa dengan tipe Score.
+Gunakan pernyataan if untuk mengevaluasi apakah siswa lulus atau tidak.
+Cetak pesan yang sesuai.
 */
 func main() {
 	// tipedatabaru()
-	conversi()
+	// conversi()
+	membandingkan()
 
 }
 
@@ -53,4 +67,17 @@ func conversi() {
 	totalBerat := (float64(beratPertama) + float64(beratKedua)) * 100
 	fmt.Printf("total berat dalam gram adalah %.0f gram.\n", totalBerat)
 
+}
+
+func membandingkan() {
+	type score int
+	var nilai score
+	fmt.Println("masukkan nilai :")
+	fmt.Scan(&nilai)
+
+	if nilai <= 75 {
+		fmt.Println("tidak lulus")
+	} else {
+		fmt.Println("tidak lulus")
+	}
 }
