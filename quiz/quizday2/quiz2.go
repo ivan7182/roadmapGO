@@ -18,7 +18,7 @@ func main() {
 func fizzbuzz() {
 	for i := 1; i <= 100; i++ {
 		if i%3 == 0 && i%5 == 0 {
-			fmt.Println("fizzbuzz")
+			fmt.Println("Fizzbuzz")
 		} else if i%3 == 0 {
 			fmt.Println("fizz")
 		} else if i%5 == 0 {
@@ -30,24 +30,26 @@ func fizzbuzz() {
 }
 
 func calculate() {
-	var angka1, angka2 float64
-	fmt.Println("masukkan angka :")
-	fmt.Scan(&angka1, &angka2)
-
 	var operator string
-	fmt.Println("masukan operator :")
+	fmt.Println("masukan operator : +, _, *, /")
 	fmt.Scan(&operator)
+
+	var angka1, angka2 float64
+	fmt.Println("masukan angka :")
+	fmt.Scan(&angka1, &angka2)
 
 	switch operator {
 	case "+":
 		fmt.Println(angka1 + angka2)
 	case "-":
 		fmt.Println(angka1 - angka2)
-	case "*":
-		fmt.Println(angka1 * angka2)
 	case "/":
 		fmt.Println(angka1 / angka2)
+	case "*":
+		fmt.Println(angka1 * angka2)
 	default:
-		fmt.Println("error")
+		{
+			fmt.Println("eror")
+		}
 	}
 }
