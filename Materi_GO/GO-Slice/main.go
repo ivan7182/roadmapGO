@@ -39,4 +39,8 @@ func fungsi() {
 	aSembako := sembako[0:2]
 	fmt.Println(len(aSembako))
 	fmt.Println(cap(aSembako))
+
+	addSembako := append(sembako, "garam")
+	fmt.Println("setelah ditambah :", addSembako)
+
 }
