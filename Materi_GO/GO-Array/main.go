@@ -3,42 +3,51 @@ package main
 import "fmt"
 
 func main() {
-	a := [3]int{100, 200, 3000}
+	//arrayMultidimensi()
+	// arrayFor()
+	// arrayRange()
+	//_for()
+	makeArray()
 
-	var b = [...]int{1, 2, 3, 4, 5}
+}
 
-	var pemrograman = [2]string{"Go", "Java"}
+func arrayMultidimensi() {
+	var sembako = [2][3]string{{"beras", "gula", "terigu"}, {"telor", "minyak", "garam"}}
+	fmt.Println(sembako)
+	// fmt.Println(number2)
+}
 
-	harga := [3]int{100, 300, 400}
-	harga[0] = 900
+func arrayFor() {
+	var number = [2]int{1, 2}
 
-	// //iinisialisai
-	number := [2]int{}
-
-	//perulangan elemen array
-	var cars = [3]string{"bmw", "ferarri", "toyota"}
-	for i := 0; i < len(cars); i++ {
-		fmt.Printf("elemen %d : %s\n", i, cars[i])
+	for i := 0; i < len(number); i++ {
+		fmt.Printf("elemen %d : %d\n", i, number[i])
 	}
+}
 
-	// //for - range
-	// var sembako = [3]string{"gula", "terigu", "beras"}
-	// for _, sembak := range sembako {
-	// 	fmt.Printf("sembako : %s\n", sembak)
-	// }
+func arrayRange() {
+	var sembako = [2]string{"beras", "gula"}
 
-	//alokasikan keyword make
-	var sembako = make([]string, 4)
+	for i, sembakoSaya := range sembako {
+		fmt.Println(i, sembakoSaya)
+	}
+}
+
+func _for() {
+	var sembako = [2]string{"beras", "gula"}
+
+	for _, sembakoSaya := range sembako {
+		fmt.Println(sembakoSaya)
+	}
+}
+
+func makeArray() {
+
+	var sembako = make([]string, 3)
+
 	sembako[0] = "gula"
-	sembako[1] = "terigu"
-	sembako[2] = "beras"
-	sembako[3] = "kecap"
+	sembako[1] = "beras"
+	sembako[2] = "terigu"
 
 	fmt.Println(sembako)
-
-	fmt.Println(a)
-	fmt.Println(len(b))
-	fmt.Println(len(pemrograman))
-	fmt.Println(harga)
-	fmt.Println(number)
 }
